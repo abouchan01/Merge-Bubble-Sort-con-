@@ -11,11 +11,11 @@ Grafica.configure(background="turquoise")
 #Configura el fondo de algun color solido, en este caso escogimos turquesa
 
 
-def CrearCajas():                 ##En el metodo siguiente le pedimos al usuario que ingrese cuantos numeros va a querer ordenar que que vaya poniendolos 
+def CrearCajas():                 ##En el metodo siguiente le pedimos al usuario que ingrese cuantos numeros va a querer ordenar para que vaya poniendolos 
 	restante = (numCajas.get())
 	i = restante
 	if restante < 5 or restante > 20:
-		caja = Label(Grafica,text='Solo se pueden ordenar entre 3 y 20 numeros') .grid(row= i+5,column = 0, padx=15, pady=1, sticky = N)
+		caja = Label(Grafica,text='Solo se pueden ordenar entre 5 y 20 numeros') .grid(row= i+5,column = 0, padx=15, pady=1, sticky = N)
 	else:	
 		while i >= 1:
 				print ("desc0ontando y prueba"+ str(restante))
@@ -27,7 +27,7 @@ def CrearCajas():                 ##En el metodo siguiente le pedimos al usuario
 		pass
 
 
-arreglo = {}            #Aquí apilaremoso encolaremos loselementos que vaya dando el usuario
+arreglo = {}            #Aquí apilaremoso encolaremos los elementos que vaya dando el usuario
 bubbleButton = Button(Grafica,text='Bubble Sort') .grid(row=1 , column= 0, ipadx = 35, padx= 40, pady = 15, sticky = NW)
 #Pusimos un boton llamado bubbleButton con la leyenda Bubble sort escrito en el, en la primera fila, columna cero, con 40 pixeles de espaciado en el eje x hacia afuera,35 en x hacia adentro , 15 en el eje y, y con tendencia a expandirse hacie el noroeste. 
 mergeButton = Button(Grafica, text='Merge Sort') .grid(row=1 , column = 1 ,ipadx = 35,padx= 40 ,pady = 15, sticky= NE)
